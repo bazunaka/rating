@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="Сведения об эффективности деятельности профессорско-педагогического состава" Height="450" Width="800">
     <Grid>
-        <StackPanel Margin="5"/>
+        <StackPanel Margin="5">
+            <GroupBox Header="Данные преподавателя" Height="231" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14">
+                <Grid Margin="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Введите фамилию:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontFamily="Times New Roman"/>
+                    <Label Content="Введите имя:" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" FontFamily="Times New Roman"/>
+                    <Label Content="Введите отчество:" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" FontFamily="Times New Roman"/>
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,0,0,0" Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Language="ru-ru"/>
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,0,0,0" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Language="ru-ru"/>
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,0,0,0" Grid.Row="2" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Language="ru-ru"/>
+                    <Label Content="Выберите кафедру" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="combox" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="250" SelectionChanged="combox_SelectionChanged"/>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
     </Grid>
 </Window>

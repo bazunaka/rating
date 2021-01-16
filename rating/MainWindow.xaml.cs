@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SQLite;
+using System.IO;
+using System.Diagnostics;
 
 namespace rating
 {
@@ -23,6 +26,8 @@ namespace rating
         public MainWindow()
         {
             InitializeComponent();
+            SQLiteConnection connect = new SQLiteConnection(@"Data Source=G:\github\rating\pers_rating.db;");
+            connect.Open();
         }
     }
 }
