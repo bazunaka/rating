@@ -16,3 +16,4 @@ G:\github\rating\rating\obj\Debug\rating.csproj.CopyComplete
 G:\github\rating\rating\obj\Debug\rating.exe
 G:\github\rating\rating\obj\Debug\rating.pdb
 G:\github\rating\rating\obj\Debug\rating.Form1.resources
+G:\github\rating\rating\bin\Debug\bin\Debug\pers_rating.db

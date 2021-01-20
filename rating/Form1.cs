@@ -15,6 +15,7 @@ namespace rating
     {
 
         private SQLiteConnection connect;
+        private List<Kafedra> _list;
 
         public Form1()
         {
@@ -27,8 +28,21 @@ namespace rating
             connect.Open();
 
             SQLiteCommand command = connect.CreateCommand();
-            command.CommandText = "SELECT indicators.name_indicator FROM indicators";
-            Console.WriteLine(command);
+            command.CommandText = "SELECT kafedra.number FROM kafedra;";
+            var rdr = command.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                comboBox1.Items.Add(rdr.GetInt32(0));
+            }
+            
+
         }
+
+    }
+
+    internal class Kafedra
+    {
+        public int name { get; internal set; }
     }
 }
