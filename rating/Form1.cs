@@ -28,6 +28,7 @@ namespace rating
             connect.Open();
 
             SQLiteCommand command = connect.CreateCommand();
+            SQLiteCommand command2 = connect.CreateCommand();
             command.CommandText = "SELECT kafedra.number FROM kafedra;";
             var rdr = command.ExecuteReader();
 
@@ -35,7 +36,14 @@ namespace rating
             {
                 comboBox1.Items.Add(rdr.GetInt32(0));
             }
-            
+
+            command2.CommandText = "SELECT position.name_position FROM position;";
+            var rdr_position = command2.ExecuteReader();
+
+            while (rdr_position.Read())
+            {
+                comboBox2.Items.Add(rdr_position.GetString(0));
+            }
 
         }
 
