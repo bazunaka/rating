@@ -15,7 +15,6 @@ namespace rating
     {
 
         private SQLiteConnection connect;
-        private List<Kafedra> _list;
 
         public Form1()
         {
@@ -47,10 +46,5 @@ namespace rating
 
         }
 
-    }
-
-    internal class Kafedra
-    {
-        public int name { get; internal set; }
     }
 }
